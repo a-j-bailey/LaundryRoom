@@ -19,6 +19,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Scanner;
 //import java.util.concurrent.TimeUnit;
+import java.util.concurrent.TimeUnit;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;
@@ -190,7 +191,8 @@ public class LaundryViewGUI {
 								+ "\nthe status of the laundry machines on campus can also be "
 								+ "\nviewed through www.laundryview.com/gcc."
 								+ "\n\n\n"
-								+ "© 2017 Adam Bailey (and definitely not Stephan Nash)",
+								+ "© 2017 Adam Bailey"
+								+ "\nabcreative.io",
 								"Info", JOptionPane.PLAIN_MESSAGE);
 				//launchInfoPopUp();
 			}
@@ -217,7 +219,7 @@ public class LaundryViewGUI {
 		lvWindow.add(roomInfo, BorderLayout.LINE_END);
 		
 		//FOOTER JPANEL
-		JLabel text = new JLabel("© 2017 Adam Bailey (and definitely not Stephan Nash)");
+		JLabel text = new JLabel("© 2017 Adam Bailey");
 		text.setForeground(Color.LIGHT_GRAY);
 		lvWindow.add(text, BorderLayout.PAGE_END);
 		
@@ -233,10 +235,10 @@ public class LaundryViewGUI {
 					JScrollPane thisRoom = machineDisplay(roomMachines);
 					thisRoom.setOpaque(false);
 					roomInfo.removeAll();
-	        		roomInfo.revalidate();
-	        		roomInfo.repaint();
-	        		sidePanel.repaint();
-	        		roomInfo.add(thisRoom);
+		        	roomInfo.revalidate();
+		        	roomInfo.repaint();
+		        	sidePanel.repaint();
+		        	roomInfo.add(thisRoom);
 				} catch (IOException ioe) {
 					System.err.println("ERROR: L-203");
 				}
