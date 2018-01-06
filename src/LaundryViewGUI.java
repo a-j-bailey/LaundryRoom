@@ -41,6 +41,7 @@ public class LaundryViewGUI {
 		int roomCode = 0;
 		
 		switch (roomName) {
+		
 		case "Alumni":
 			roomCode = 39390311;
 			break;
